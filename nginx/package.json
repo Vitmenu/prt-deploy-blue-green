@@ -1,0 +1,13 @@
+{
+  "name": "nginx",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "docker build . -t prt-nginx-zero-downtime-nginx"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

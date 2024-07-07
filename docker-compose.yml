@@ -1,0 +1,23 @@
+services:
+  prt-nginx-zero-downtime-nodejs:
+    container_name: prt-nginx-zero-downtime-nodejs-blue
+    image: prt-nginx-zero-downtime-nodejs
+    ports: 
+      - 3000:3000
+    networks:
+      - prt-nginx-zero-downtime
+    restart: unless-stopped
+  prt-nginx-zero-downtime-nginx:
+    container_name: prt-nginx-zero-downtime-nginx
+    image: prt-nginx-zero-downtime-nginx
+    ports: 
+      - 5173:5173
+    networks:
+      - prt-nginx-zero-downtime
+    restart: unless-stopped
+  
+
+networks:
+  prt-nginx-zero-downtime:
+    name: prt-nginx-zero-downtime
+    driver: bridge
