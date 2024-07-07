@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node --watch index.js",
     "build": "docker build . -t prt-nginx-zero-downtime-nodejs;",
-    "deploy": "sh ../test.sh"
+    "deploy": "sh ../main.sh"
   },
   "keywords": [],
   "author": "",
