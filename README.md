@@ -9,7 +9,7 @@ The blue-green deployment strategy is a technique used in software development t
 
 Feel free to explore the contents of this repository and follow the provided instructions to gain a better understanding of blue-green deployments.
 
-**To know more about blue-green deployment, Check out [this link!](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html#:~:text=A%20blue%2Fgreen%20deployment%20is,running%20the%20new%20application%20version.)**
+To know more about blue-green deployment, Check out [Blue/green deployments](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html#:~:text=A%20blue%2Fgreen%20deployment%20is,running%20the%20new%20application%20version.)
 
 Some other great resources about CI/CD pipeline with GitHub Actions
 
@@ -20,7 +20,7 @@ Some other great resources about CI/CD pipeline with GitHub Actions
 
 ## Steps: How it works?
 
-main.sh: 
+In main.sh: 
 
     1. Check which container is running between blue and green containers.
 
@@ -32,12 +32,9 @@ main.sh:
 
     5. Confirm if the new container started without any problem.
 
-    6. Replace /etc/nginx/nginx.conf with /etc/nginx/pre/nginx.<blue || green>.conf by running those commands.
+    6. Replace the old conf file with a new one!
         {
-            sudo cp /etc/nginx/pre/nginx.<blue || green>.conf /etc/nginx/nginx.conf
-            sudo nginx -s -reload
-        } || {
-            sudo cp /etc/nginx/pre/<server-name>/<blue || green>.conf /etc/nginx/conf.d/<server-name>.conf
+            sudo cp /etc/server-blocks/<app name>/<blue || green>.conf /etc/nginx/conf.d/<app name>.conf
             sudo nginx -s -reload
         }
 
