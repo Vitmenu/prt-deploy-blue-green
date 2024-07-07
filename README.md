@@ -21,6 +21,7 @@ Some other great resources about CI/CD pipeline with GitHub Actions
 ## Steps: How it works?
 
 main.sh: 
+
     1. Check which container is running between blue and green containers.
 
     2. Distinguish which container will stop and which container will start.
