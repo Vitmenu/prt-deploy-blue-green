@@ -20,7 +20,7 @@ Some other great resources about CI/CD pipeline with GitHub Actions
 
 ## Steps: How it works?
 
-main.sh: {
+main.sh: 
     1. Check which container is running between blue and green containers.
 
     2. Distinguish which container will stop and which container will start.
@@ -39,6 +39,5 @@ main.sh: {
             sudo cp /etc/nginx/pre/<server-name>/<blue || green>.conf /etc/nginx/conf.d/<server-name>.conf
             sudo nginx -s -reload
         }
-}
 
 Now, you can run the main.sh script with GitHub Actions for better automation.
