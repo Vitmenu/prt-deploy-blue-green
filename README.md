@@ -1,5 +1,12 @@
 # A Simple Example of Blue-Green Deployment
 
+# Table of Contents
+
+- [Summary](#summary)
+- [Explanation: What's the *blue-green deployment*?](#explanation-whats-the-blue-green-deployment)
+- [Steps: How it works?](#steps-how-it-works)
+- [Advanced Deployment Strategies Using External Services](#advanced-deployment-strategies-using-external-services) *(Assuming you'll add this section as discussed)*
+
 ## Summary
 This repository serves as an example of the blue-green deployment strategy. It is designed to help individuals **practice** the deployment process before delving into the development of a CI/CD pipeline.
 
@@ -9,9 +16,9 @@ The blue-green deployment strategy is a technique used in software development t
 
 Feel free to explore the contents of this repository and follow the provided instructions to gain a better understanding of blue-green deployments.
 
-To know more about blue-green deployment, Check out [Blue/green deployments](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html#:~:text=A%20blue%2Fgreen%20deployment%20is,running%20the%20new%20application%20version.)
+### Some other great resources about CI/CD pipeline with GitHub Actions and blue-green deployment
 
-Some other great resources about CI/CD pipeline with GitHub Actions
+To know more about blue-green deployment, Check out [Blue/green deployments](https://docs.aws.amazon.com/whitepapers/latest/overview-deployment-options/bluegreen-deployments.html#:~:text=A%20blue%2Fgreen%20deployment%20is,running%20the%20new%20application%20version.)
 
 [About Building CI/CD](https://medium.com/@ugurcanerdogan/full-stack-application-deployment-with-docker-aws-ec2-and-github-actions-c27e81d134b2)
 
@@ -39,3 +46,23 @@ In main.sh:
         }
 
 Now, you can run the main.sh script with GitHub Actions for better automation.
+
+## Advanced Deployment Strategies Using External Services
+
+While the blue-green deployment strategy outlined in this repository provides a solid foundation for understanding deployment processes, it's important to note that there are more advanced and efficient methods available through external deployment services. These services offer enhanced features such as automated rollbacks, traffic splitting, canary releases, and more comprehensive monitoring capabilities, which can significantly streamline the deployment process.
+
+### Benefits of Using External Deployment Services:
+
+- **Automated Rollbacks**: Quickly revert to the previous version if issues are detected post-deployment, minimizing downtime and impact on users.
+- **Traffic Splitting**: Gradually route a percentage of user traffic to the new version, allowing for more controlled testing in production.
+- **Canary Releases**: Similar to traffic splitting, this allows for deploying new versions to a small subset of users before a full rollout.
+- **Enhanced Monitoring and Alerts**: Get real-time insights into the deployment process and application performance, enabling faster response to any issues.
+
+### Recommended External Deployment Services:
+
+- **AWS CodeDeploy**: Offers automated deployments to Amazon EC2 instances, AWS Fargate, AWS Lambda, and your on-premises servers.
+- **Azure DevOps**: Provides a suite of tools for CI/CD pipelines, allowing for seamless deployments to various environments.
+- **Google Cloud Deploy**: A managed service that automates the delivery of applications to Google Kubernetes Engine (GKE) clusters.
+- **Heroku**: A platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+Exploring these external services can provide a more scalable and efficient deployment process, allowing teams to focus more on development and less on the operational complexities of deployment strategies.
