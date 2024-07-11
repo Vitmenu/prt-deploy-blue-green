@@ -5,7 +5,7 @@
 - [Summary](#summary)
 - [Explanation: What's the *blue-green deployment*?](#explanation-whats-the-blue-green-deployment)
 - [Steps: How it works?](#steps-how-it-works)
-- [Advanced Deployment Strategies Using External Services](#advanced-deployment-strategies-using-external-services) *(Assuming you'll add this section as discussed)*
+- [Advanced Deployment Strategies Using External Services](#advanced-deployment-strategies-using-external-services)
 
 ## Summary
 This repository serves as an example of the blue-green deployment strategy. It is designed to help individuals **practice** the deployment process before delving into the development of a CI/CD pipeline.
